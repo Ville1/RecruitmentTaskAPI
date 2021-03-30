@@ -13,13 +13,14 @@ namespace RecruitmentTaskAPI.Utils
                 string.Format(
                     "{0}/{1}",
                     Settings.SaveLocation,
-                    string.Format(Settings.SaveFileName, DateTime.Now.ToString("DDMMYYYY"))
+                    string.Format(Settings.SaveFileName, DateTime.Now.ToString("ddMMyyyy"))
                 ),
                 string.Format(
                     "{0},{1}",
                     JsonConvert.SerializeObject(data),
                     Environment.NewLine
-                ));
+                )
+            );
         }
     }
 }
