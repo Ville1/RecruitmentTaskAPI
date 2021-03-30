@@ -6,11 +6,11 @@ namespace RecruitmentTaskAPI.Utils
     {
         public static void Initialize(IConfiguration configuration)
         {
-            SaveLocation = configuration.GetValue<string>("SaveLocation");
-            SaveFileName = configuration.GetValue<string>("SaveFileName");
+            FileLocation = configuration.GetValue<string>("FileLocation");
+            FileName = configuration.GetValue<string>("FileName");
         }
 
-        public static string SaveLocation { get; private set; }
-        public static string SaveFileName { get; private set; }
+        public static string FileLocation { get; private set; }
+        public static string FileName { get; private set; }
     }
 }

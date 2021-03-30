@@ -12,8 +12,8 @@ namespace RecruitmentTaskAPI.Utils
             File.AppendAllText(
                 string.Format(
                     "{0}/{1}",
-                    Settings.SaveLocation,
-                    string.Format(Settings.SaveFileName, DateTime.Now.ToString("ddMMyyyy"))
+                    Settings.FileLocation,
+                    string.Format(Settings.FileName, DateTime.Now.ToString("ddMMyyyy"))
                 ),
                 string.Format(
                     "{0},{1}",
