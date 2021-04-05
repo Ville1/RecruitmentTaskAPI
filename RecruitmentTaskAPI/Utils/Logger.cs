@@ -6,7 +6,6 @@ namespace RecruitmentTaskAPI.Utils
         public static void LogException(Exception exception)
         {
             //This is there logging would happen
-            throw exception;
         }
     }
 }
