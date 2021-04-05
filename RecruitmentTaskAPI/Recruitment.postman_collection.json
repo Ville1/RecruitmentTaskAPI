@@ -1,0 +1,128 @@
+{
+	"info": {
+		"_postman_id": "b2fe1073-6965-4338-a95f-855e3f4709ca",
+		"name": "Recruitment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Add email (localhost)",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "admin",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "Admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Key\": \"afdasfsf\",\r\n    \"Email\":\"email@here.com\",\r\n    \"Attributes\": [\"attributeA\",\"attributeB\",\"attributeC\",\"attributeD\",\"attributeE\",\"attributeF\",\"attributeG\",\"attributeH\",\"attributeI\",\"attribute123\"]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:61923/api/email/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "61923",
+					"path": [
+						"api",
+						"email",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get today's emails (localhost)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:61923/api/email/getEmailsToday",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "61923",
+					"path": [
+						"api",
+						"email",
+						"getEmailsToday"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add email (azure)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Key\": \"afdasfsf\",\r\n    \"Email\":\"email@here.com\",\r\n    \"Attributes\": [\"attributeA\",\"attributeB\",\"attributeC\",\"attributeD\",\"attributeE\",\"attributeF\",\"attributeG\",\"attributeH\",\"attributeI\",\"attribute123\"]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://recruitmenttaskapi.azurewebsites.net/api/email/add",
+					"protocol": "https",
+					"host": [
+						"recruitmenttaskapi",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"api",
+						"email",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get today's emails (azure)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://recruitmenttaskapi.azurewebsites.net/api/email/getEmailsToday",
+					"protocol": "https",
+					"host": [
+						"recruitmenttaskapi",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"api",
+						"email",
+						"getEmailsToday"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
